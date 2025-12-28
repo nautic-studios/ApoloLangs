@@ -1,0 +1,4 @@
+name: ApoloLangs
+version: '1.0'
+main: com.github.nautic.ApoloLangs
+api-version: '1.20'
