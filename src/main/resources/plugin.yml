@@ -1,4 +1,20 @@
+#                                                            Developed by Senkex
+#                                                        (Nautic Studios @ (C) 2026)
+
 name: ApoloLangs
 version: '1.0'
-main: com.github.nautic.ApoloLangs
+author: 'Senkex'
+
 api-version: '1.20'
+main: com.github.nautic.ApoloLangs
+
+depend:
+  - PlaceholderAPI
+
+commands:
+  apololangs:
+    description: 'Original command'
+    aliases:
+      - apl
+      - alangs
+      - apololang
