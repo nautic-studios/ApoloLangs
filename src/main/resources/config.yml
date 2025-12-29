@@ -1,0 +1,22 @@
+default: 'english'
+
+commands:
+  - lang
+  - language
+
+database:
+  type: "SQLite"
+  config:
+    user: "root"
+    password: "password"
+    host: "localhost"
+    database: "nautic"
+    port: 3306
+
+register:
+  languages:
+    - 'es_ES:spanish:spanish.yml'
+    - 'en_US:english:english.yml'
+    - 'zh_CN:chinese:chinese.yml'
+    - 'ru_RU:russian:russian.yml'
+    - 'pt_BR:portuguese:portuguese.yml'

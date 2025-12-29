@@ -1,0 +1,44 @@
+help: |
+  <empty>
+  &b&l  ApoloLangs &7- &fVersión: &a{version}
+  <empty>
+  &a  /apololangs help &7- &fMuestra este mensaje
+  &a  /apololangs list &7- &fLista los idiomas registrados
+  &a  /apololangs set &e<player> <language> &7- &fCambia el idioma de un jugador
+  &a  /apololangs reset &e<player> &7- &fRestaura el idioma al predeterminado
+  &a  /apololangs info &e<player> &7- &fMuestra el idioma del jugador
+  &a  /apololangs reload &7- &fRecarga el plugin y los idiomas
+  <empty>
+
+not_found_path: "&cRuta no encontrada: &e{path}"
+invalid_lang_format: "&cFormato de idioma inválido: &e{input}"
+invalid_placeholder_format: "&cFormato de placeholder inválido: &e{placeholder}"
+file_not_found: "&cArchivo no encontrado: &e{file}"
+not_translated: "&eNo traducido: &a{path}"
+
+plugin:
+  header: "&b&lApoloLangs &7v&e{version}"
+  base-usage: "&b&lApoloLangs &7» &7Usa &f/apololangs help &7para ver los comandos disponibles."
+
+list:
+  header: "&b&lApoloLangs &7» &fIdiomas registrados:"
+  format: "&7  - &e{locale} &7→ &a{language}"
+
+usage:
+  language-command: "&b&lApoloLangs &7» &cUso correcto: &f/lang <locale/lang>"
+  set: "&b&lApoloLangs &7» &cUso correcto: &f/apololangs set &7<player> <language>"
+  reset: "&b&lApoloLangs &7» &cUso correcto: &f/apololangs reset &7<player>"
+  info: "&b&lApoloLangs &7» &cUso correcto: &f/apololangs info &7<player>"
+
+info:
+  format: "&b&lApoloLangs &7» &fIdioma de &7{player} &a({language})"
+
+success:
+  other-language-set: "&b&lApoloLangs &7» &aEl idioma de &f{player} &aha sido cambiado a &e{language}&a."
+  language-set: "&b&lApoloLangs &7» &aTu idioma ha sido cambiado a &e{language}&a."
+  reset: "&b&lApoloLangs &7» &aEl idioma de &f{player} &aha sido restablecido."
+  reload: "&b&lApoloLangs &7» &aRecargado correctamente."
+
+errors:
+  no-permission: "&b&lApoloLangs &7» &cNo tienes permiso para usar este comando."
+  language-not-found: "&b&lApoloLangs &7» &cEl idioma &e{input} &cno está registrado."
