@@ -1,44 +1,40 @@
 help: |
   <empty>
-  &b&l  ApoloLangs &7- &fVersão: &a{version}
+  &#35ADFF&l  ApoloLangs &#CDCDCD- &fVersão: &#38FF35{version}
   <empty>
-  &a  /apololangs help &7- &fMostra esta mensagem
-  &a  /apololangs list &7- &fLista os idiomas registrados
-  &a  /apololangs set &e<player> <language> &7- &fAltera o idioma de um jogador
-  &a  /apololangs reset &e<player> &7- &fRestaura o idioma padrão
-  &a  /apololangs info &e<player> &7- &fMostra o idioma do jogador
-  &a  /apololangs reload &7- &fRecarrega o plugin e os idiomas
+  &#38FF35  /apololangs help &#CDCDCD- &fMostra esta mensagem
+  &#38FF35  /apololangs list &#CDCDCD- &fLista os idiomas registrados
+  &#38FF35  /apololangs set &#FFD935<player> <language> &#CDCDCD- &fAltera o idioma de um jogador
+  &#38FF35  /apololangs reset &#FFD935<player> &#CDCDCD- &fRestaura o idioma padrão
+  &#38FF35  /apololangs info &#FFD935<player> &#CDCDCD- &fMostra o idioma do jogador
+  &#38FF35  /apololangs reload &#CDCDCD- &fRecarrega o plugin e os idiomas
   <empty>
 
-not_found_path: "&cCaminho não encontrado: &e{path}"
-invalid_lang_format: "&cFormato de idioma inválido: &e{input}"
-invalid_placeholder_format: "&cFormato de placeholder inválido: &e{placeholder}"
-file_not_found: "&cArquivo não encontrado: &e{file}"
-not_translated: "&eNão traduzido: &a{path}"
-
-plugin:
-  header: "&b&lApoloLangs &7v&e{version}"
-  base-usage: "&b&lApoloLangs &7» &7Use &f/apololangs help &7para ver os comandos disponíveis."
+not_found_path: "&#FF3535Caminho não encontrado: &#FFD935{path}"
+invalid_lang_format: "&#FF3535Formato de idioma inválido: &#FFD935{input}"
+invalid_placeholder_format: "&#FF3535Formato de placeholder inválido: &#FFD935{placeholder}"
+file_not_found: "&#FF3535Arquivo não encontrado: &#FFD935{file}"
+not_translated: "&#FFD935Não traduzido: &#38FF35{path}"
 
 list:
-  header: "&b&lApoloLangs &7» &fIdiomas registrados:"
-  format: "&7  - &e{locale} &7→ &a{language}"
+  header: "&#35ADFF&lApoloLangs &#CDCDCD» &fIdiomas registrados:"
+  format: "&#CDCDCD  - &#FFD935{locale} &#CDCDCD→ &#38FF35{language}"
 
 usage:
-  language-command: "&b&lApoloLangs &7» &cUso correto: &f/lang <locale/lang>"
-  set: "&b&lApoloLangs &7» &cUso correto: &f/apololangs set &7<player> <language>"
-  reset: "&b&lApoloLangs &7» &cUso correto: &f/apololangs reset &7<player>"
-  info: "&b&lApoloLangs &7» &cUso correto: &f/apololangs info &7<player>"
+  language-command: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Uso correto: &f/lang <locale/lang>"
+  set: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Uso correto: &f/apololangs set &#CDCDCD<player> <language>"
+  reset: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Uso correto: &f/apololangs reset &#CDCDCD<player>"
+  info: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Uso correto: &f/apololangs info &#CDCDCD<player>"
 
 info:
-  format: "&b&lApoloLangs &7» &fIdioma de &7{player} &a({language})"
+  format: "&#35ADFF&lApoloLangs &#CDCDCD» &fIdioma de &#CDCDCD{player} &#38FF35({language})"
 
 success:
-  other-language-set: "&b&lApoloLangs &7» &aO idioma de &f{player} &afoi alterado para &e{language}&a."
-  language-set: "&b&lApoloLangs &7» &aSeu idioma foi alterado para &e{language}&a."
-  reset: "&b&lApoloLangs &7» &aO idioma de &f{player} &afoi restaurado."
-  reload: "&b&lApoloLangs &7» &aRecarregado com sucesso."
+  other-language-set: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35O idioma de &f{player} &#38FF35foi alterado para &#FFD935{language}&#38FF35."
+  language-set: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Seu idioma foi alterado para &#FFD935{language}&#38FF35."
+  reset: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35O idioma de &f{player} &#38FF35foi restaurado."
+  reload: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Recarregado com sucesso."
 
 errors:
-  no-permission: "&b&lApoloLangs &7» &cVocê não tem permissão para usar este comando."
-  language-not-found: "&b&lApoloLangs &7» &cO idioma &e{input} &cnão está registrado."
+  no-permission: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Você não tem permissão para usar este comando."
+  language-not-found: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535O idioma &#FFD935{input} &#FF3535não está registrado."

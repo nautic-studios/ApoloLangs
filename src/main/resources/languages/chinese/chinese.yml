@@ -1,44 +1,40 @@
 help: |
   <empty>
-  &b&l  ApoloLangs &7- &f版本: &a{version}
+  &#35ADFF&l  ApoloLangs &#CDCDCD- &f版本: &#38FF35{version}
   <empty>
-  &a  /apololangs help &7- &f显示此帮助信息
-  &a  /apololangs list &7- &f列出已注册的语言
-  &a  /apololangs set &e<player> <language> &7- &f更改玩家的语言
-  &a  /apololangs reset &e<player> &7- &f恢复为默认语言
-  &a  /apololangs info &e<player> &7- &f查看玩家当前语言
-  &a  /apololangs reload &7- &f重载插件和语言
+  &#38FF35  /apololangs help &#CDCDCD- &f显示此消息
+  &#38FF35  /apololangs list &#CDCDCD- &f列出已注册的语言
+  &#38FF35  /apololangs set &#FFD935<player> <language> &#CDCDCD- &f更改玩家语言
+  &#38FF35  /apololangs reset &#FFD935<player> &#CDCDCD- &f恢复默认语言
+  &#38FF35  /apololangs info &#FFD935<player> &#CDCDCD- &f显示玩家语言
+  &#38FF35  /apololangs reload &#CDCDCD- &f重新加载插件和语言
   <empty>
 
-not_found_path: "&c未找到路径: &e{path}"
-invalid_lang_format: "&c无效的语言格式: &e{input}"
-invalid_placeholder_format: "&c无效的占位符格式: &e{placeholder}"
-file_not_found: "&c未找到文件: &e{file}"
-not_translated: "&e未翻译: &a{path}"
-
-plugin:
-  header: "&b&lApoloLangs &7v&e{version}"
-  base-usage: "&b&lApoloLangs &7» &7使用 &f/apololangs help &7查看可用命令。"
+not_found_path: "&#FF3535未找到路径: &#FFD935{path}"
+invalid_lang_format: "&#FF3535无效的语言格式: &#FFD935{input}"
+invalid_placeholder_format: "&#FF3535无效的占位符格式: &#FFD935{placeholder}"
+file_not_found: "&#FF3535未找到文件: &#FFD935{file}"
+not_translated: "&#FFD935未翻译: &#38FF35{path}"
 
 list:
-  header: "&b&lApoloLangs &7» &f已注册的语言:"
-  format: "&7  - &e{locale} &7→ &a{language}"
+  header: "&#35ADFF&lApoloLangs &#CDCDCD» &f已注册的语言:"
+  format: "&#CDCDCD  - &#FFD935{locale} &#CDCDCD→ &#38FF35{language}"
 
 usage:
-  language-command: "&b&lApoloLangs &7» &c正确用法: &f/lang <locale/lang>"
-  set: "&b&lApoloLangs &7» &c正确用法: &f/apololangs set &7<player> <language>"
-  reset: "&b&lApoloLangs &7» &c正确用法: &f/apololangs reset &7<player>"
-  info: "&b&lApoloLangs &7» &c正确用法: &f/apololangs info &7<player>"
+  language-command: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535正确用法: &f/lang <locale/lang>"
+  set: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535正确用法: &f/apololangs set &#CDCDCD<player> <language>"
+  reset: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535正确用法: &f/apololangs reset &#CDCDCD<player>"
+  info: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535正确用法: &f/apololangs info &#CDCDCD<player>"
 
 info:
-  format: "&b&lApoloLangs &7» &f玩家 &7{player} &f的语言是 &a({language})"
+  format: "&#35ADFF&lApoloLangs &#CDCDCD» &f玩家 &#CDCDCD{player} &#38FF35的语言 ({language})"
 
 success:
-  other-language-set: "&b&lApoloLangs &7» &a已将 &f{player} &a的语言更改为 &e{language}&a。"
-  language-set: "&b&lApoloLangs &7» &a你的语言已更改为 &e{language}&a。"
-  reset: "&b&lApoloLangs &7» &a已重置 &f{player} &a的语言。"
-  reload: "&b&lApoloLangs &7» &a重载成功。"
+  other-language-set: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35玩家 &f{player} &#38FF35的语言已更改为 &#FFD935{language}&#38FF35."
+  language-set: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35你的语言已更改为 &#FFD935{language}&#38FF35."
+  reset: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35玩家 &f{player} &#38FF35的语言已重置."
+  reload: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35重新加载成功."
 
 errors:
-  no-permission: "&b&lApoloLangs &7» &c你没有权限使用此命令。"
-  language-not-found: "&b&lApoloLangs &7» &c语言 &e{input} &c未注册。"
+  no-permission: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535你没有权限使用此命令."
+  language-not-found: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535语言 &#FFD935{input} &#FF3535未注册."
