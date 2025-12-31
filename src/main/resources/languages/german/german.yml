@@ -1,0 +1,40 @@
+help: |
+  <empty>
+  &#35ADFF&l  ApoloLangs &#CDCDCD- &fVersion: &#38FF35{version}
+  <empty>
+  &#38FF35  /apololangs help &#CDCDCD- &fZeigt diese Nachricht an
+  &#38FF35  /apololangs list &#CDCDCD- &fZeigt registrierte Sprachen
+  &#38FF35  /apololangs set &#FFD935<spieler> <sprache> &#CDCDCD- &fÄndert die Sprache eines Spielers
+  &#38FF35  /apololangs reset &#FFD935<spieler> &#CDCDCD- &fSetzt die Standardsprache zurück
+  &#38FF35  /apololangs info &#FFD935<spieler> &#CDCDCD- &fZeigt die Sprache des Spielers
+  &#38FF35  /apololangs reload &#CDCDCD- &fLädt das Plugin und die Sprachen neu
+  <empty>
+
+not_found_path: "&#FF3535Pfad nicht gefunden: &#FFD935{path}"
+invalid_lang_format: "&#FF3535Ungültiges Sprachformat: &#FFD935{input}"
+invalid_placeholder_format: "&#FF3535Ungültiges Placeholder-Format: &#FFD935{placeholder}"
+file_not_found: "&#FF3535Datei nicht gefunden: &#FFD935{file}"
+not_translated: "&#FFD935Nicht übersetzt: &#38FF35{path}"
+
+list:
+  header: "&#35ADFF&lApoloLangs &#CDCDCD» &fRegistrierte Sprachen:"
+  format: "&#CDCDCD  - &#FFD935{locale} &#CDCDCD→ &#38FF35{language}"
+
+usage:
+  language-command: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Korrekte Nutzung: &f/lang <locale/sprache>"
+  set: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Korrekte Nutzung: &f/apololangs set &#CDCDCD<spieler> <sprache>"
+  reset: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Korrekte Nutzung: &f/apololangs reset &#CDCDCD<spieler>"
+  info: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Korrekte Nutzung: &f/apololangs info &#CDCDCD<spieler>"
+
+info:
+  format: "&#35ADFF&lApoloLangs &#CDCDCD» &fSprache von &#CDCDCD{player} &#38FF35({language})"
+
+success:
+  other-language-set: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Die Sprache von &f{player} &#38FF35wurde auf &#FFD935{language} &#38FF35geändert."
+  language-set: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Deine Sprache wurde auf &#FFD935{language} &#38FF35geändert."
+  reset: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Die Sprache von &f{player} &#38FF35wurde zurückgesetzt."
+  reload: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Erfolgreich neu geladen."
+
+errors:
+  no-permission: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Du hast keine Berechtigung für diesen Befehl."
+  language-not-found: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Die Sprache &#FFD935{input} &#FF3535ist nicht registriert."
