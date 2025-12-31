@@ -129,6 +129,22 @@
 
                             <createDependencyReducedPom>false</createDependencyReducedPom>
 
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/maven/**</exclude>
+                                        <exclude>META-INF/native-image/**</exclude>
+                                        <exclude>META-INF/versions/**</exclude>
+                                        <exclude>META-INF/services/**</exclude>
+
+                                        <exclude>META-INF/*.SF</exclude>
+                                        <exclude>META-INF/*.DSA</exclude>
+                                        <exclude>META-INF/*.RSA</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+
                             <relocations>
                                 <relocation>
                                     <pattern>com.zaxxer.hikari</pattern>
@@ -151,11 +167,6 @@
                                 </relocation>
 
                                 <relocation>
-                                    <pattern>org.intellij</pattern>
-                                    <shadedPattern>com.github.nautic.libs.intellij</shadedPattern>
-                                </relocation>
-
-                                <relocation>
                                     <pattern>org.slf4j</pattern>
                                     <shadedPattern>com.github.nautic.libs.slf4j</shadedPattern>
                                 </relocation>
@@ -163,6 +174,11 @@
                                 <relocation>
                                     <pattern>org.h2</pattern>
                                     <shadedPattern>com.github.nautic.libs.h2</shadedPattern>
+                                </relocation>
+
+                                <relocation>
+                                    <pattern>org.intellij</pattern>
+                                    <shadedPattern>com.github.nautic.libs.intellij</shadedPattern>
                                 </relocation>
                             </relocations>
 
