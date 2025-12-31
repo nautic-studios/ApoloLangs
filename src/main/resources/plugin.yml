@@ -3,7 +3,9 @@
 
 name: ApoloLangs
 version: '1.0'
-author: 'Senkex'
+authors:
+  - 'Senkex'
+  - 'Nautic Studios'
 
 api-version: '1.20'
 main: com.github.nautic.ApoloLangs
@@ -18,4 +20,3 @@ commands:
     aliases:
       - apl
       - alangs
-      - apololang
