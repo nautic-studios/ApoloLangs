@@ -1,9 +1,11 @@
 package com.github.nautic.utils;
 
+import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,6 +17,13 @@ public class ColorUtils {
 
     public static String Set(String message) {
         return TranslateColor(TranslateHex(SafeMiniMessage(message)));
+    }
+
+    public static String SetPlaceholders(Player player, String message) {
+        if (player != null && message != null) {
+            message = PlaceholderAPI.setPlaceholders(player, message);
+        }
+        return Set(message);
     }
 
     public static String TranslateColor(String text) {
