@@ -9,6 +9,18 @@ default: "english"
 commands:
   - lang
   - language
+  - idioma
+  - lenguaje
+  - lingua
+  - idioma
+  - langue
+  - sprache
+  - lingua
+  - jezyk
+  - yazyk
+  - язык
+  - yuyan
+  - 语言
 
 # DATABASE SETTINGS
 # Supported types:
@@ -31,8 +43,12 @@ database:
 # Languages are loaded on startup and reload
 register:
   languages:
-    - "es_ES:spanish:spanish.yml"
     - "en_US:english:english.yml"
-    - "zh_CN:chinese:chinese.yml"
+    - "es_ES:spanish:spanish.yml"
     - "ru_RU:russian:russian.yml"
+    - "zh_CN:chinese:chinese.yml"
+    - "fr_FR:french:french.yml"
+    - "de_DE:german:german.yml"
+    - "it_IT:italian:italian.yml"
+    - "pl_PL:polish:polish.yml"
     - "pt_BR:portuguese:portuguese.yml"
