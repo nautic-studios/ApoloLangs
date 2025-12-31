@@ -31,7 +31,7 @@ public final class ApoloAPI {
 
     public static ApoloAPI get() {
         if (instance == null) {
-            throw new IllegalStateException("ApoloAPI not initialized");
+            throw new IllegalStateException("[ApoloAPI] Could not be started");
         }
         return instance;
     }

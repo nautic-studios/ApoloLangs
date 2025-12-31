@@ -1,22 +1,38 @@
-default: 'english'
+# Default fallback language
+# Used when a player has no language or a translation is missing
+# Must match a language registered below
+default: "english"
 
+# Command aliases for ApoloLangs
+# These commands behave like /apololangs
+# No need to register them in plugin.yml
 commands:
   - lang
   - language
 
+# DATABASE SETTINGS
+# Supported types:
+# - h2    : embedded database (recommended for single servers)
+# - mysql : external database (recommended for networks)
 database:
-  type: "SQLite"
-  config:
-    user: "root"
-    password: "password"
-    host: "localhost"
-    database: "nautic"
-    port: 3306
+  type: "h2"
+  # MySQL settings (ignored if using h2)
+  address: "localhost"
+  port: 3306
+  database: "nautic"
+  username: "root"
+  password: "password"
 
+# REGISTERED LANGUAGES
+# Format:
+#   LOCALE:LANGUAGE_NAME:FILE_NAME
+# Example:
+#   en_US:english:english.yml
+# Languages are loaded on startup and reload
 register:
   languages:
-    - 'es_ES:spanish:spanish.yml'
-    - 'en_US:english:english.yml'
-    - 'zh_CN:chinese:chinese.yml'
-    - 'ru_RU:russian:russian.yml'
-    - 'pt_BR:portuguese:portuguese.yml'
+    - "es_ES:spanish:spanish.yml"
+    - "en_US:english:english.yml"
+    - "zh_CN:chinese:chinese.yml"
+    - "ru_RU:russian:russian.yml"
+    - "pt_BR:portuguese:portuguese.yml"
