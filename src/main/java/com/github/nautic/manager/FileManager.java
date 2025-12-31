@@ -7,13 +7,15 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class FileManager {
 
     private final Map<String, YamlConfiguration> loadedFiles = new HashMap<>();
-    private final File baseLanguageDir;
     private final Map<String, FileConfiguration> configs = new HashMap<>();
+    private final File baseLanguageDir;
 
     public FileManager(File baseLanguageDir) {
         this.baseLanguageDir = baseLanguageDir;
@@ -21,16 +23,26 @@ public class FileManager {
 
     public void clearCache() {
         loadedFiles.clear();
+        configs.clear();
     }
 
     public void loadFile(String id, File file) {
         if (!file.exists()) return;
-        loadedFiles.put(id.toLowerCase(), YamlConfiguration.loadConfiguration(file));
+
+        YamlConfiguration cfg = YamlConfiguration.loadConfiguration(file);
+        String key = id.toLowerCase();
+
+        loadedFiles.put(key, cfg);
+        configs.put(key, cfg);
     }
 
     public String get(String id, String path) {
         YamlConfiguration cfg = loadedFiles.get(id.toLowerCase());
         return cfg != null ? cfg.getString(path) : null;
+    }
+
+    public FileConfiguration getConfig(String fileId) {
+        return configs.get(fileId.toLowerCase());
     }
 
     public boolean isLoaded(String id) {
@@ -96,7 +108,7 @@ public class FileManager {
         }
     }
 
-    public FileConfiguration getConfig(String fileId) {
-        return configs.get(fileId);
+    public Set<String> getLoadedFileIds() {
+        return new HashSet<>(loadedFiles.keySet());
     }
 }
