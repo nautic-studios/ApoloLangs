@@ -3,6 +3,8 @@ package com.github.nautic.handler;
 import com.github.nautic.manager.FileManager;
 import com.github.nautic.manager.LanguageManager;
 import com.github.nautic.utils.ColorUtils;
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.entity.Player;
 
 import java.util.List;
 
@@ -17,6 +19,10 @@ public class LangHandler {
     }
 
     public String get(String langInput, String filePath, String path) {
+        return get(null, langInput, filePath, path);
+    }
+
+    public String get(Player player, String langInput, String filePath, String path) {
 
         String langFolder = languageManager.resolveLanguageStrict(langInput);
         if (langFolder == null) {
@@ -27,26 +33,47 @@ public class LangHandler {
 
         if (!fileManager.isLoaded(fileId)) {
             fileManager.loadByLangAndPath(langFolder, filePath + ".yml");
+        }
 
-            if (!fileManager.isLoaded(fileId)) {
-                return getSystemMessageOrDefault(
-                        langFolder,
-                        "file_not_found",
-                        "&cFile not found &7[" + filePath + "]"
-                ).replace("{file}", filePath);
+        if (!fileManager.isLoaded(fileId)) {
+            return ColorUtils.SetPlaceholders(player,
+                    getSystemMessageOrDefault(
+                            langFolder,
+                            "file_not_found",
+                            "&cFile not found &7[" + filePath + "]"
+                    ).replace("{file}", filePath)
+            );
+        }
+
+        FileConfiguration cfg = fileManager.getConfig(fileId);
+        if (cfg == null) {
+            return ColorUtils.SetPlaceholders(player,
+                    getSystemMessage(langFolder, "invalid_lang_format")
+            );
+        }
+
+        String result = null;
+
+        if (cfg.isString(path)) {
+            result = cfg.getString(path);
+        }
+
+        else if (cfg.isList(path)) {
+            List<String> list = cfg.getStringList(path);
+            if (!list.isEmpty()) {
+                result = String.join("\n", list);
             }
         }
 
-        String text = fileManager.get(fileId, path);
-        if (text == null) {
-            return getSystemMessageOrDefault(
+        if (result == null) {
+            result = getSystemMessageOrDefault(
                     langFolder,
                     "not_translated",
                     "&fNot translated &7» &a" + path
             ).replace("{path}", path);
         }
 
-        return ColorUtils.Set(text.trim());
+        return ColorUtils.SetPlaceholders(player, result.trim());
     }
 
     public String getSystemMessage(String langFolder, String key) {
@@ -77,42 +104,5 @@ public class LangHandler {
         }
 
         return ColorUtils.Set(msg.trim());
-    }
-
-    public List<String> getList(String langInput, String filePath, String path) {
-
-        String langFolder = languageManager.resolveLanguageStrict(langInput);
-        if (langFolder == null) {
-            langFolder = languageManager.getDefaultLang();
-        }
-
-        String fileId = langFolder + ":" + filePath.toLowerCase();
-
-        if (!fileManager.isLoaded(fileId)) {
-            fileManager.loadByLangAndPath(langFolder, filePath + ".yml");
-        }
-
-        if (fileManager.isLoaded(fileId)) {
-            var cfg = fileManager.getConfig(fileId);
-            if (cfg != null && cfg.isList(path)) {
-                return cfg.getStringList(path);
-            }
-        }
-
-        String defLang = languageManager.getDefaultLang();
-        String defFileId = defLang + ":" + filePath.toLowerCase();
-
-        if (!fileManager.isLoaded(defFileId)) {
-            fileManager.loadByLangAndPath(defLang, filePath + ".yml");
-        }
-
-        if (fileManager.isLoaded(defFileId)) {
-            var cfg = fileManager.getConfig(defFileId);
-            if (cfg != null && cfg.isList(path)) {
-                return cfg.getStringList(path);
-            }
-        }
-
-        return java.util.Collections.emptyList();
     }
 }
