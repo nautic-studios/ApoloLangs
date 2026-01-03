@@ -4,6 +4,7 @@ help: |
   <empty>
   &#38FF35  /apololangs help &#CDCDCD- &fПоказать это сообщение
   &#38FF35  /apololangs list &#CDCDCD- &fСписок зарегистрированных языков
+  &#38FF35  /apololangs aliases &#CDCDCD- &fПоказать алиасы команд
   &#38FF35  /apololangs set &#FFD935<player> <language> &#CDCDCD- &fИзменить язык игрока
   &#38FF35  /apololangs reset &#FFD935<player> &#CDCDCD- &fСбросить язык по умолчанию
   &#38FF35  /apololangs info &#FFD935<player> &#CDCDCD- &fПоказать язык игрока

@@ -4,6 +4,7 @@ help: |
   <empty>
   &#38FF35  /apololangs help &#CDCDCD- &fZeigt diese Nachricht an
   &#38FF35  /apololangs list &#CDCDCD- &fZeigt registrierte Sprachen
+  &#38FF35  /apololangs aliases &#CDCDCD- &fZeigt Befehls-Aliasse
   &#38FF35  /apololangs set &#FFD935<spieler> <sprache> &#CDCDCD- &fÄndert die Sprache eines Spielers
   &#38FF35  /apololangs reset &#FFD935<spieler> &#CDCDCD- &fSetzt die Standardsprache zurück
   &#38FF35  /apololangs info &#FFD935<spieler> &#CDCDCD- &fZeigt die Sprache des Spielers

@@ -4,6 +4,7 @@ help: |
   <empty>
   &#38FF35  /apololangs help &#CDCDCD- &fShow this message
   &#38FF35  /apololangs list &#CDCDCD- &fList registered languages
+  &#38FF35  /apololangs aliases &#CDCDCD- &fShow command aliases
   &#38FF35  /apololangs set &#FFD935<player> <language> &#CDCDCD- &fChange a player's language
   &#38FF35  /apololangs reset &#FFD935<player> &#CDCDCD- &fReset language to default
   &#38FF35  /apololangs info &#FFD935<player> &#CDCDCD- &fShow player's language

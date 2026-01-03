@@ -4,6 +4,7 @@ help: |
   <empty>
   &#38FF35  /apololangs help &#CDCDCD- &f显示此消息
   &#38FF35  /apololangs list &#CDCDCD- &f列出已注册的语言
+  &#38FF35  /apololangs aliases &#CDCDCD- &f显示命令别名
   &#38FF35  /apololangs set &#FFD935<player> <language> &#CDCDCD- &f更改玩家语言
   &#38FF35  /apololangs reset &#FFD935<player> &#CDCDCD- &f恢复默认语言
   &#38FF35  /apololangs info &#FFD935<player> &#CDCDCD- &f显示玩家语言
