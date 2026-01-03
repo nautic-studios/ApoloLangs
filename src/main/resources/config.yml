@@ -1,11 +1,24 @@
-# Default fallback language
-# Used when a player has no language or a translation is missing
-# Must match a language registered below
+# Language used when:
+# - A player has no language saved
+# - A translation key is missing
+# IMPORTANT:
+# This value MUST match a registered language name below
 default: "english"
 
-# Command aliases for ApoloLangs
-# These commands behave like /apololangs
-# No need to register them in plugin.yml
+# COMMAND ALIASES
+# These commands are SHORTCUTS for changing your own language
+# They behave like:
+#   /lang <locale|language>
+#
+# Examples:
+#   /lang spanish
+#   /idioma german
+#   /sprache язык
+#
+# NOTE:
+# - These commands DO NOT replace /apololangs
+# - They are player-only language selectors
+# - Changes here REQUIRE a server restart
 commands:
   - lang
   - language
@@ -24,11 +37,13 @@ commands:
 
 # DATABASE SETTINGS
 # Supported types:
-# - h2    : embedded database (recommended for single servers)
-# - mysql : external database (recommended for networks)
+# - h2    : Local embedded database (single server)
+# - mysql : External database (recommended for networks)
+#
+# NOTE:
+# - MySQL settings are ignored if type = h2
 database:
   type: "h2"
-  # MySQL settings (ignored if using h2)
   address: "localhost"
   port: 3306
   database: "nautic"
@@ -37,10 +52,20 @@ database:
 
 # REGISTERED LANGUAGES
 # Format:
-#   LOCALE:LANGUAGE_NAME:FILE_NAME
+#   LOCALE:LANGUAGE_NAME:MAIN_FILE
+#
 # Example:
 #   en_US:english:english.yml
-# Languages are loaded on startup and reload
+#
+# How it works:
+# - On startup or /apololangs reload:
+#   • The language folder is created automatically
+#   • The main .yml file is created if missing
+#   • Files are loaded into memory
+#
+# IMPORTANT:
+# - You CAN add/remove languages and use /apololangs reload
+# - No server restart needed for this section
 register:
   languages:
     - "en_US:english:english.yml"
