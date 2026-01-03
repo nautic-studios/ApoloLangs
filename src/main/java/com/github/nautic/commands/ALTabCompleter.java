@@ -65,6 +65,7 @@ public class ALTabCompleter implements TabCompleter {
         cmds.add("help");
 
         addIfPerm(sender, cmds, "list");
+        addIfPerm(sender, cmds, "aliases");
         addIfPerm(sender, cmds, "set");
         addIfPerm(sender, cmds, "reset");
         addIfPerm(sender, cmds, "info");

@@ -20,6 +20,10 @@ list:
   header: "&#35ADFF&lApoloLangs &#CDCDCD» &fRegistrierte Sprachen:"
   format: "&#CDCDCD  - &#FFD935{locale} &#CDCDCD→ &#38FF35{language}"
 
+aliases:
+  header: "&#35ADFF&lApoloLangs &#CDCDCD» &fBefehls-Aliasse:"
+  format: "&#CDCDCD  - &#38FF35{command}"
+
 usage:
   language-command: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Korrekte Nutzung: &f/lang <locale/sprache>"
   set: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Korrekte Nutzung: &f/apololangs set &#CDCDCD<spieler> <sprache>"
