@@ -31,7 +31,7 @@ public final class ApoloLangs extends JavaPlugin {
         if (instance != null) return;
         instance = this;
 
-        int pluginId = 28633;
+        int pluginId = 28734;
         Metrics metrics = new Metrics(this, pluginId);
 
         saveDefaultConfig();
