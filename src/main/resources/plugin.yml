@@ -2,7 +2,7 @@
 #                                                        (Nautic Studios @ (C) 2026)
 
 name: ApoloLangs
-version: '1.0'
+version: '${version}'
 authors:
   - 'Senkex'
   - 'Nautic Studios'
