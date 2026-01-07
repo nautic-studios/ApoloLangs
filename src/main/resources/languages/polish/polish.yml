@@ -40,6 +40,27 @@ success:
   reset: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Język gracza &f{player} &#38FF35został zresetowany."
   reload: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Przeładowano pomyślnie."
 
+github:
+  usage: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Poprawne użycie: &f/apololangs github <sync|status>"
+
+  sync:
+    start: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Rozpoczynanie synchronizacji GitHub..."
+    success: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Synchronizacja GitHub zakończona pomyślnie."
+    no-changes: "&#35ADFF&lApoloLangs &#CDCDCD» &#FFD935Nie wykryto zmian. Wszystko jest aktualne."
+    failed: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Synchronizacja GitHub nie powiodła się. Sprawdź konsolę."
+
+  status:
+    header: "&#35ADFF&lApoloLangs &#CDCDCD» &fStatus synchronizacji GitHub:"
+    repository: "&#CDCDCD  • &#38FF35Repozytorium: &#FFD935{repo}"
+    branch: "&#CDCDCD  • &#38FF35Gałąź: &#FFD935{branch}"
+    auth: "&#CDCDCD  • &#38FF35Uwierzytelnianie: &#FFD935{auth}"
+    remote-root: "&#CDCDCD  • &#38FF35Zdalna ścieżka: &#FFD935{path}"
+    local-root: "&#CDCDCD  • &#38FF35Lokalna ścieżka: &#FFD935{path}"
+    create-missing: "&#CDCDCD  • &#38FF35Tworzenie brakujących plików: &#FFD935{value}"
+    overwrite-existing: "&#CDCDCD  • &#38FF35Nadpisywanie istniejących plików: &#FFD935{value}"
+    delete-missing: "&#CDCDCD  • &#38FF35Usuwanie brakujących plików: &#FFD935{value}"
+    reload-after-sync: "&#CDCDCD  • &#38FF35Przeładuj po synchronizacji: &#FFD935{value}"
+
 errors:
   no-permission: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Nie masz uprawnień do użycia tej komendy."
   language-not-found: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Język &#FFD935{input} &#FF3535nie jest zarejestrowany."

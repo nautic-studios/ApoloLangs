@@ -40,6 +40,27 @@ success:
   reset: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35La langue de &f{player} &#38FF35a été réinitialisée."
   reload: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Rechargé avec succès."
 
+github:
+  usage: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Utilisation correcte : &f/apololangs github <sync|status>"
+
+  sync:
+    start: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Démarrage de la synchronisation GitHub..."
+    success: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35Synchronisation GitHub terminée avec succès."
+    no-changes: "&#35ADFF&lApoloLangs &#CDCDCD» &#FFD935Aucun changement détecté. Tout est à jour."
+    failed: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535La synchronisation GitHub a échoué. Vérifiez la console."
+
+  status:
+    header: "&#35ADFF&lApoloLangs &#CDCDCD» &fStatut de synchronisation GitHub :"
+    repository: "&#CDCDCD  • &#38FF35Dépôt : &#FFD935{repo}"
+    branch: "&#CDCDCD  • &#38FF35Branche : &#FFD935{branch}"
+    auth: "&#CDCDCD  • &#38FF35Authentification : &#FFD935{auth}"
+    remote-root: "&#CDCDCD  • &#38FF35Chemin distant : &#FFD935{path}"
+    local-root: "&#CDCDCD  • &#38FF35Chemin local : &#FFD935{path}"
+    create-missing: "&#CDCDCD  • &#38FF35Créer les fichiers manquants : &#FFD935{value}"
+    overwrite-existing: "&#CDCDCD  • &#38FF35Écraser les fichiers existants : &#FFD935{value}"
+    delete-missing: "&#CDCDCD  • &#38FF35Supprimer les fichiers manquants : &#FFD935{value}"
+    reload-after-sync: "&#CDCDCD  • &#38FF35Recharger après synchronisation : &#FFD935{value}"
+
 errors:
   no-permission: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535Vous n’avez pas la permission d’utiliser cette commande."
   language-not-found: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535La langue &#FFD935{input} &#FF3535n’est pas enregistrée."

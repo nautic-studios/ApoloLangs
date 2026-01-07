@@ -40,6 +40,27 @@ success:
   reset: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35玩家 &f{player} &#38FF35的语言已重置."
   reload: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35重新加载成功."
 
+github:
+  usage: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535正确用法: &f/apololangs github <sync|status>"
+
+  sync:
+    start: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35正在开始 GitHub 同步..."
+    success: "&#35ADFF&lApoloLangs &#CDCDCD» &#38FF35GitHub 同步已成功完成。"
+    no-changes: "&#35ADFF&lApoloLangs &#CDCDCD» &#FFD935未检测到更改，所有内容均为最新。"
+    failed: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535GitHub 同步失败，请检查控制台。"
+
+  status:
+    header: "&#35ADFF&lApoloLangs &#CDCDCD» &fGitHub 同步状态:"
+    repository: "&#CDCDCD  • &#38FF35仓库: &#FFD935{repo}"
+    branch: "&#CDCDCD  • &#38FF35分支: &#FFD935{branch}"
+    auth: "&#CDCDCD  • &#38FF35认证方式: &#FFD935{auth}"
+    remote-root: "&#CDCDCD  • &#38FF35远程路径: &#FFD935{path}"
+    local-root: "&#CDCDCD  • &#38FF35本地路径: &#FFD935{path}"
+    create-missing: "&#CDCDCD  • &#38FF35创建缺失文件: &#FFD935{value}"
+    overwrite-existing: "&#CDCDCD  • &#38FF35覆盖已有文件: &#FFD935{value}"
+    delete-missing: "&#CDCDCD  • &#38FF35删除多余文件: &#FFD935{value}"
+    reload-after-sync: "&#CDCDCD  • &#38FF35同步后重新加载: &#FFD935{value}"
+
 errors:
   no-permission: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535你没有权限使用此命令."
   language-not-found: "&#35ADFF&lApoloLangs &#CDCDCD» &#FF3535语言 &#FFD935{input} &#FF3535未注册."
