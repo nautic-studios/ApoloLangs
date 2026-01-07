@@ -44,6 +44,10 @@ public class ALTabCompleter implements TabCompleter {
                     if (!hasPermission(sender, args[0])) return List.of();
                     return filter(args[1], getOnlinePlayers());
 
+                case "github":
+                    if (!hasPermission(sender, "github")) return List.of();
+                    return filter(args[1], List.of("sync", "status"));
+
                 default:
                     return List.of();
             }
@@ -70,6 +74,7 @@ public class ALTabCompleter implements TabCompleter {
         addIfPerm(sender, cmds, "reset");
         addIfPerm(sender, cmds, "info");
         addIfPerm(sender, cmds, "reload");
+        addIfPerm(sender, cmds, "github");
 
         return cmds;
     }

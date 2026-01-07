@@ -2,6 +2,8 @@ package com.github.nautic.commands;
 
 import com.github.nautic.ApoloLangs;
 import com.github.nautic.database.DatabaseManager;
+import com.github.nautic.github.GitHubConfig;
+import com.github.nautic.github.GitHubSyncResult;
 import com.github.nautic.handler.LangHandler;
 import com.github.nautic.manager.LanguageManager;
 import com.github.nautic.utils.ColorUtils;
@@ -151,6 +153,113 @@ public class ALCommands implements CommandExecutor {
                 sender.sendMessage(ColorUtils.Set(
                         lang.get(userLang, userLang, "success.reset")
                                 .replace("{player}", target.getName())
+                ));
+                return true;
+            }
+
+            case "github": {
+
+                if (!sender.hasPermission("apololangs.github")
+                        && !sender.hasPermission("apololangs.admin")) {
+                    noPerm(sender, userLang);
+                    return true;
+                }
+
+                if (args.length != 2) {
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.usage")
+                    ));
+                    return true;
+                }
+
+                if (args[1].equalsIgnoreCase("sync")) {
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.sync.start")
+                    ));
+
+                    Bukkit.getScheduler().runTaskAsynchronously(plugin, () -> {
+
+                        GitHubSyncResult result = plugin
+                                .getGitHubSyncManager()
+                                .sync();
+
+                        Bukkit.getScheduler().runTask(plugin, () -> {
+                            switch (result) {
+                                case SUCCESS -> sender.sendMessage(ColorUtils.Set(
+                                        lang.get(userLang, userLang, "github.sync.success")
+                                ));
+                                case NO_CHANGES -> sender.sendMessage(ColorUtils.Set(
+                                        lang.get(userLang, userLang, "github.sync.no-changes")
+                                ));
+                                case FAILED -> sender.sendMessage(ColorUtils.Set(
+                                        lang.get(userLang, userLang, "github.sync.failed")
+                                ));
+                            }
+                        });
+                    });
+
+                    return true;
+                }
+
+                if (args[1].equalsIgnoreCase("status")) {
+
+                    GitHubConfig cfg = GitHubConfig.load(plugin.getConfig());
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.header")
+                    ));
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.repository")
+                                    .replace("{repo}", cfg.repository)
+                    ));
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.branch")
+                                    .replace("{branch}", cfg.branch)
+                    ));
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.auth")
+                                    .replace("{auth}", cfg.authType.name().toLowerCase())
+                    ));
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.remote-root")
+                                    .replace("{path}", cfg.remoteRoot)
+                    ));
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.local-root")
+                                    .replace("{path}", cfg.localRoot)
+                    ));
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.create-missing")
+                                    .replace("{value}", String.valueOf(cfg.createMissing))
+                    ));
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.overwrite-existing")
+                                    .replace("{value}", String.valueOf(cfg.overwriteExisting))
+                    ));
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.delete-missing")
+                                    .replace("{value}", String.valueOf(cfg.deleteMissing))
+                    ));
+
+                    sender.sendMessage(ColorUtils.Set(
+                            lang.get(userLang, userLang, "github.status.reload-after-sync")
+                                    .replace("{value}", String.valueOf(cfg.reloadAfterSync))
+                    ));
+
+                    return true;
+                }
+
+                sender.sendMessage(ColorUtils.Set(
+                        lang.get(userLang, userLang, "github.usage")
                 ));
                 return true;
             }
