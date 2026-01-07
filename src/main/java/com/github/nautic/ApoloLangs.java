@@ -7,6 +7,7 @@ import com.github.nautic.commands.customs.LangsLoader;
 import com.github.nautic.database.DatabaseManager;
 import com.github.nautic.expansion.ALExpansion;
 import com.github.nautic.expansion.ApoloLangsExpansion;
+import com.github.nautic.github.GitHubSyncManager;
 import com.github.nautic.handler.LangHandler;
 import com.github.nautic.manager.FileManager;
 import com.github.nautic.manager.LanguageManager;
@@ -24,6 +25,8 @@ public final class ApoloLangs extends JavaPlugin {
     private FileManager fileManager;
     private LanguageManager languageManager;
     private LangHandler langHandler;
+
+    private GitHubSyncManager gitHubSyncManager;
 
     @Override
     public void onEnable() {
@@ -52,6 +55,8 @@ public final class ApoloLangs extends JavaPlugin {
         ApoloAPI.initialize(this);
 
         LangsLoader.registerLanguageCommands(this);
+
+        this.gitHubSyncManager = new GitHubSyncManager(this);
 
         getCommand("apololangs").setExecutor(new ALCommands(this));
         getCommand("apololangs").setTabCompleter(new ALTabCompleter(this));
@@ -90,5 +95,9 @@ public final class ApoloLangs extends JavaPlugin {
 
     public LangHandler getLangHandler() {
         return langHandler;
+    }
+
+    public GitHubSyncManager getGitHubSyncManager() {
+        return gitHubSyncManager;
     }
 }
