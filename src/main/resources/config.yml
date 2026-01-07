@@ -77,3 +77,29 @@ register:
     - "it_IT:italian:italian.yml"
     - "pl_PL:polish:polish.yml"
     - "pt_BR:portuguese:portuguese.yml"
+
+# GITHUB SYNCHRONIZATION
+# This section enables synchronization of language files
+# directly from a GitHub repository.
+#
+# It supports live updates, file creation, overwriting
+# and optional cleanup of unused files.
+# Synchronization can be triggered via command.
+github:
+  repository:
+    name: "owner/repo"        # GitHub repository in owner/repository format
+    branch: "main"            # Branch used for synchronization
+
+  authentication:
+    type: "none"              # none | token
+    token: ""                 # GitHub Personal Access Token (if type = token)
+
+  paths:
+    remote-root: "languages"  # Folder path inside the GitHub repository
+    local-root: "languages"   # Local plugin folder for language files
+
+  sync:
+    create-missing: true      # Download files missing locally
+    overwrite-existing: true  # Overwrite local files with GitHub versions
+    delete-missing: false     # Delete local files not present on GitHub
+    reload-after-sync: true   # Reload languages after sync completes
